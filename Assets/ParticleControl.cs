@@ -18,6 +18,12 @@ public class ParticleControl : MonoBehaviour
     void Start()
     {
         ps = GetComponent<ParticleSystem>();
+        ParticleSystem.ForceOverLifetimeModule force = ps.forceOverLifetime;
+
+        force.xMultiplier = 5;
+        force.zMultiplier = 5;
+        force.yMultiplier = 50;
+
     }
 
     // Update is called once per frame
